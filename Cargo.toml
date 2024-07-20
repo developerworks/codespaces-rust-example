@@ -7,3 +7,14 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+monoio = { version = "0.2.3", default-features = false, features = [
+    "async-cancel",
+    "sync",
+    "bytes",
+    "iouring",
+    "legacy",
+    "macros",
+    "utils",
+    "poll-io",      # experimental
+] }
+tokio = { version = "1.38.1", features = ["full"] }
